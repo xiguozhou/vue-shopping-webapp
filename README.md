@@ -1,39 +1,219 @@
-# 毕业设计
+# Vue Shopping WebApp
 
-#### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+一个基于Vue.js开发的移动端购物商城应用，提供完整的电商购物体验。
 
-#### 软件架构
-软件架构说明
+## 📱 项目简介
 
+这是一个功能完整的移动端购物商城应用，采用Vue.js 2.x + Vuex + Vue Router技术栈开发。项目包含商品浏览、购物车管理、订单处理、用户管理等完整的电商功能模块。
 
-#### 安装教程
+## ✨ 主要功能
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+### 🛍️ 商品管理
+- **商品展示**: 轮播图展示、商品列表、商品详情
+- **商品搜索**: 支持商品搜索和筛选
+- **商品评价**: 商品评论和评分系统
+- **库存管理**: 实时库存显示和更新
 
-#### 使用说明
+### 🛒 购物车功能
+- **添加商品**: 一键添加到购物车
+- **数量管理**: 支持商品数量增减
+- **价格计算**: 自动计算总价和优惠
+- **商品选择**: 支持批量选择和删除
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+### 📦 订单系统
+- **订单创建**: 从购物车生成订单
+- **订单状态**: 待支付、已支付、已发货、已完成、退货
+- **订单管理**: 订单查询、状态更新、订单详情
+- **支付功能**: 模拟支付流程
 
-#### 参与贡献
+### 👤 用户功能
+- **用户登录**: 用户认证和登录
+- **地址管理**: 收货地址的增删改查
+- **个人信息**: 用户信息管理
+- **消息反馈**: 用户留言和反馈
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+### 🏪 后台管理
+- **商品管理**: 商品信息的增删改查
+- **订单管理**: 订单处理和状态管理
+- **库存管理**: 仓库库存管理
+- **用户管理**: 用户信息管理
 
+## 🛠️ 技术栈
 
-#### 特技
+### 前端框架
+- **Vue.js 2.6.11**: 渐进式JavaScript框架
+- **Vue Router 3.1.6**: 官方路由管理器
+- **Vuex 3.3.0**: 状态管理模式
+- **Vue CLI 2.9.6**: Vue.js开发工具
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+### UI组件库
+- **Mint-UI 2.2.13**: 基于Vue.js的移动端组件库
+- **Vant 2.12.7**: 轻量、可靠的移动端Vue组件库
+- **Element-UI 2.15.1**: 基于Vue.js的桌面端组件库
+- **MUI**: 轻量级CSS框架
+
+### 构建工具
+- **Webpack 4.42.1**: 模块打包工具
+- **Babel**: JavaScript编译器
+- **Less/Sass**: CSS预处理器
+
+### 其他依赖
+- **Axios**: HTTP客户端
+- **Moment.js**: 日期处理库
+- **Vue-jsonp**: JSONP请求库
+- **Vue-preview**: 图片预览组件
+
+## 📁 项目结构
+
+```
+vue-shopping-webapp/
+├── public/                 # 静态资源
+├── src/                    # 源代码
+│   ├── api/               # API接口
+│   ├── components/        # 组件目录
+│   │   ├── AddressAddAndEdit/  # 地址管理
+│   │   ├── goods/         # 商品相关组件
+│   │   ├── Manage/        # 后台管理组件
+│   │   ├── OrderManage/   # 订单管理
+│   │   ├── ShopCar/       # 购物车组件
+│   │   ├── tabbar/        # 底部导航栏
+│   │   └── subcomponents/ # 子组件
+│   ├── css/               # 样式文件
+│   ├── images/            # 图片资源
+│   ├── lib/               # 第三方库
+│   ├── store/             # Vuex状态管理
+│   ├── App.vue            # 根组件
+│   ├── main.js            # 入口文件
+│   └── router.js          # 路由配置
+├── package.json           # 项目配置
+├── vue.config.js          # Vue配置文件
+└── webpack.config.js      # Webpack配置
+```
+
+## 🚀 快速开始
+
+### 环境要求
+- Node.js >= 12.0.0
+- npm >= 6.0.0
+
+### 安装依赖
+```bash
+npm install
+```
+
+### 开发环境运行
+```bash
+npm run dev
+```
+项目将在 `http://localhost:3000` 启动
+
+### 生产环境构建
+```bash
+npm run build
+```
+
+## 📱 功能模块详解
+
+### 1. 首页模块
+- 轮播图展示
+- 功能导航菜单
+- 商品推荐
+
+### 2. 商品模块
+- 商品列表展示
+- 商品详情页
+- 商品评价系统
+- 商品描述
+
+### 3. 购物车模块
+- 商品添加/删除
+- 数量调整
+- 价格计算
+- 批量操作
+
+### 4. 订单模块
+- 订单创建
+- 订单状态管理
+- 支付流程
+- 订单历史
+
+### 5. 用户模块
+- 用户登录
+- 个人信息管理
+- 地址管理
+- 消息反馈
+
+### 6. 管理后台
+- 商品管理
+- 订单处理
+- 库存管理
+- 用户管理
+
+## 🔧 配置说明
+
+### 路由配置
+项目使用Vue Router进行路由管理，主要路由包括：
+- `/home`: 首页
+- `/member`: 会员中心
+- `/shopcar`: 购物车
+- `/search`: 搜索页面
+- `/login`: 登录页面
+- `/Manage`: 后台管理
+
+### 状态管理
+使用Vuex进行状态管理，主要管理：
+- 购物车数据
+- 用户信息
+- 订单状态
+
+### API配置
+项目使用Axios进行HTTP请求，主要API接口：
+- 商品相关API
+- 订单相关API
+- 用户相关API
+
+## 📝 开发说明
+
+### 代码规范
+- 使用ES6+语法
+- 组件命名采用PascalCase
+- 文件命名采用kebab-case
+- 使用Vue官方推荐的代码风格
+
+### 组件开发
+- 组件采用单文件组件(.vue)格式
+- 使用scoped样式避免样式污染
+- 组件间通信使用props和emit
+
+### 状态管理
+- 使用Vuex进行全局状态管理
+- 购物车数据持久化到localStorage
+- 模块化管理不同功能的状态
+
+## 🤝 贡献指南
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开 Pull Request
+
+## 📄 许可证
+
+本项目采用 ISC 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 👨‍💻 作者
+
+**guoxi.chou** 
+
+## 🙏 致谢
+
+感谢以下开源项目的支持：
+- Vue.js 团队
+- Mint-UI 团队
+- Vant 团队
+- Element-UI 团队
+
+---
+
+⭐ 如果这个项目对你有帮助，请给它一个星标！
